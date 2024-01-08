@@ -13,7 +13,7 @@ class DriverManager(object):
     ):
         self._cache_manager = cache_manager
         if not self._cache_manager:
-            self._cache_manager = DriverCacheManager()
+            self._cache_manager = DriverCacheManager(os_system_manager=os_system_manager)
 
         self._download_manager = download_manager
         if self._download_manager is None:
